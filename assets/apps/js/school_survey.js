@@ -115,7 +115,7 @@ crud.get_update = function (id, row_id) {
 crud.set_after_update = function (items, row_id) {
 
     var row_id = $('tr[name="' + row_id + '"]');
-    row_id.find("td:eq(7)").html(items.hospname);
+    row_id.find("td:eq(5)").html(items.hospname);
 
 }
 
