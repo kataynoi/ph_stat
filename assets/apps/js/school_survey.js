@@ -162,6 +162,7 @@ $(document).on('click', 'button[data-btn="btn_edit"]', function (e) {
     $('#id').val(id);
     var row_id = $(this).parent().parent().parent().attr('name');
     $("#frmModal input").prop('disabled', true);
+    $("#frmModal select").prop('disabled', true);
     $("#hospcode").prop('disabled', false);
     $("#btn_save").prop('disabled', false);
     $("#frmModal .btn").prop('disabled', false);
