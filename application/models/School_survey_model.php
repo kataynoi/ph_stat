@@ -13,7 +13,7 @@ class School_survey_model extends CI_Model
     var $order_column = Array('SCHOOLID', 'SCHOOLNAME', 'SUBDISTRICTCODE', 'TELEPHONE1', 'JURISDICTIONID', 'ORGANIZATIONTYPECODE', 'hospcode',);
 
     function make_query()
-    {   $this->db->select('SCHOOLID,SCHOOLNAME, b.ampurname as AMPURCODE,c.tambonname as SUBDISTRICTCODE,TELEPHONE1,JURISDICTIONID,ORGANIZATIONTYPECODE,d.hosname as hospcode')
+    {   $this->db->select('SCHOOLID,SCHOOLNAME, b.ampurname as AMPURCODE,c.tambonname as SUBDISTRICTCODE,TELEPHONE1,JURISDICTIONID,ORGANIZATIONTYPECODE,CONCAT("[",d.hoscode,"] ",d.hosname) as hospcode')
                 ->join('campur as b','LEFT(a.SUBDISTRICTCODE,4) = b.ampurcodefull')
                 ->join('ctambon as c','a.SUBDISTRICTCODE = c.tamboncodefull')
                 ->join('chospital_mk as d','a.hospcode = d.hoscode','LEFT')
