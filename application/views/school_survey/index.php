@@ -90,7 +90,7 @@
                     <select  id="hospcode" placeholder="" value=""  class="hospcode form-control" name="state" style="width: 100%">
                         <?php
                         foreach ($chospital_mk as $r) {
-                            echo "<option value=$r->hoscode >$r->hosname </option>";
+                            echo "<option value=$r->hoscode >[$r->hoscode] $r->hosname  </option>";
                         } ?>
                     </select></div>
             </div>
