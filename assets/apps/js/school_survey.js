@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     var dataTable = $('#table_data').DataTable({
         language: {
             searchPlaceholder: "สถานศึกษา อำเภอ ตำบล รพ.สต"
@@ -150,6 +151,8 @@ crud.set_update = function (data, row_id) {
     $("#JURISDICTIONID").val(data.rows["JURISDICTIONID"]);
     $("#ORGANIZATIONTYPECODE").val(data.rows["ORGANIZATIONTYPECODE"]);
     $("#hospcode").val(data.rows["hospcode"]);
+    $('.hospcode').select2();
+
 }
 
 $(document).on('click', 'button[data-btn="btn_edit"]', function (e) {
@@ -162,7 +165,6 @@ $(document).on('click', 'button[data-btn="btn_edit"]', function (e) {
     $("#hospcode").prop('disabled', false);
     $("#btn_save").prop('disabled', false);
     $("#frmModal .btn").prop('disabled', false);
-
     crud.get_update(id, row_id);
     $('#frmModal').modal('show');
 

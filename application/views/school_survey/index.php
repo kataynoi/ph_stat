@@ -1,6 +1,8 @@
 ﻿<script src="<?php echo base_url() ?>assets/vendor/js/jquery.dataTables.min.js" charset="utf-8"></script>
 <script src="<?php echo base_url() ?>assets/vendor/js/dataTables.bootstrap4.min.js" charset="utf-8"></script>
 <link href="<?php echo base_url() ?>assets/vendor/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js"></script>
 
 <html>
 <body>
@@ -35,7 +37,7 @@
 </div>
 
 
-<div class="modal fade" id="frmModal">
+<div class="modal fade" id="frmModal"  role="dialog" style="overflow:hidden;">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
 
@@ -85,11 +87,10 @@
 
                 <div class="form-group">
                     <label for="hospcode">หน่วยบริการที่รับผิดชอบ</label>
-                    <select class="form-control" id="hospcode" placeholder="" value="">
-                        <option>-------</option>
+                    <select  id="hospcode" placeholder="" value=""  class="hospcode form-control" name="state" style="width: 100%">
                         <?php
                         foreach ($chospital_mk as $r) {
-                            echo "<option value=$r->hoscode > $r->hoscode".":"."$r->hosname </option>";
+                            echo "<option value=$r->hoscode >$r->hosname </option>";
                         } ?>
                     </select></div>
             </div>
@@ -104,16 +105,5 @@
     </div>
 </div>
 
-
 <script src="<?php echo base_url() ?>assets/apps/js/school_survey.js" charset="utf-8"></script>
 
-<!--         foreach ($invit_type as $r) {
-                                if ($outsite["invit_type"] == $r->id) {
-                                    $s = "selected";
-                                } else {
-                                    $s = "";
-                                }
-                                echo "<option value=" $r->id" $s > $r->name </option>";
-
-}
--->
