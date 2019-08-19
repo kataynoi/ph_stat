@@ -1,0 +1,51 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Certification extends CI_Controller
+{
+    public $user_id;
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->layout->setLayout('certification_layout');
+        $this->load->model('Certification_model', 'cer');
+    }
+
+    public function index()
+    {
+        $data[] = '';
+        $this->layout->view('certification/index', $data);
+    }
+
+
+    function fetch_certification()
+    {
+        $fetch_data = $this->cer->make_datatables();
+        $data = array();
+        foreach ($fetch_data as $row) {
+
+
+            $sub_array = array();
+            $sub_array[] = $row->id;
+            $sub_array[] = $row->name;
+            $sub_array[] ='<a href="'.site_url('certification/certification_pdf/').$row->id.'" target="_blank" class="btn btn-info"><i class="fa fa-print  "></i> พิมพ์เกียรติบัตร</a>';
+            $data[] = $sub_array;
+        }
+        $output = array(
+            "draw" => intval($_POST["draw"]),
+            "recordsTotal" => $this->cer->get_all_data(),
+            "recordsFiltered" => $this->cer->get_filtered_data(),
+            "data" => $data
+        );
+        echo json_encode($output);
+    }
+
+    public function certification_pdf($id)
+    {
+        $data['name']=$this->cer->get_name($id);
+        $this->load->view('certification/pdf_view',$data);
+
+
+    }
+}
