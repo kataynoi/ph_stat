@@ -8,7 +8,7 @@
                     </div>
                     <div class="col-xs-9 text-right">
                         <div class="huge" id="percent_audit"><?php echo ''; ?></div>
-                        <div>บุคลากร</div>
+                        <div>...</div>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                     </div>
                     <div class="col-xs-9 text-right">
                         <div class="huge" id="percent_audit_true"><?php echo ''; ?></div>
-                        <div>จำนวน PC</div>
+                        <div>...</div>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="col-xs-9 text-right">
                         <div class="huge"><?php echo ''; ?></div>
-                        <div>NoteBook</div>
+                        <div>...</div>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                     </div>
                     <div class="col-xs-9 text-right">
                         <div class="huge"><?php echo '';?></div>
-                        <div>Printer</div>
+                        <div>---</div>
                     </div>
                 </div>
             </div>
@@ -97,20 +97,20 @@
     <div class='col col-lg-6'>
         <div class="panel panel-success">
             <div class="panel-heading ">
-                xxxx
+
             </div>
             <div class="panel-body">
-                xxxxxxxx
+
             </div>
         </div>
     </div>
     <div class='col col-lg-6'>
         <div class="panel  panel-info">
             <div class="panel-heading">
-                xxxx
+
             </div>
             <div class="panel-body">
-                xxxxxxxx
+
             </div>
         </div>
     </div>
