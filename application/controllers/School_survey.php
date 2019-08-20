@@ -72,8 +72,7 @@ class School_survey extends CI_Controller
             $sub_array[] = $row->ClassroomNumber;*/
             $sub_array[] = $row->hospcode;
             $sub_array[] = '<div class="btn-group pull-right" role="group" >
-                <button class="btn btn-outline btn-success" data-btn="btn_view" data-id="' . $row->SCHOOLID . '"><i class="fa fa-eye"></i></button>
-                <button class="btn btn-outline btn-warning" data-btn="btn_edit" data-id="' . $row->SCHOOLID . '"><i class="fa fa-edit"></i></button>';
+                  <button class="btn btn-outline btn-warning" data-btn="btn_edit" data-id="' . $row->SCHOOLID . '"><i class="fa fa-edit"></i></button>';
             $data[] = $sub_array;
         }
         $output = array(
