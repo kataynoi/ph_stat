@@ -13,6 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 defined('SHOW_DEBUG_BACKTRACE') OR define('SHOW_DEBUG_BACKTRACE', TRUE);
 define('LINE_API',"https://notify-api.line.me/api/notify");
+define('PROVCODE',"44");
 
 /*
 |--------------------------------------------------------------------------

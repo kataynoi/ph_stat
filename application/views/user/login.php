@@ -56,6 +56,9 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        font-family: 'Kanit', sans-serif;
+        font-size: 90%;
+
     }
 
     .login-form {

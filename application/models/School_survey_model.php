@@ -16,7 +16,7 @@ class School_survey_model extends CI_Model
     {   $this->db->select('SCHOOLID,SCHOOLNAME, b.ampurname as AMPURCODE,c.tambonname as SUBDISTRICTCODE,TELEPHONE1,JURISDICTIONID,ORGANIZATIONTYPECODE,CONCAT("[",d.hoscode,"] ",d.hosname) as hospcode')
                 ->join('campur as b','LEFT(a.SUBDISTRICTCODE,4) = b.ampurcodefull')
                 ->join('ctambon as c','a.SUBDISTRICTCODE = c.tamboncodefull')
-                ->join('chospital_mk as d','a.hospcode = d.hoscode','LEFT')
+                ->join('chospital as d','a.hospcode = d.hoscode','LEFT')
                 ->from($this->table);
         if (isset($_POST["search"]["value"])) {
             $this->db->group_start();
@@ -107,8 +107,8 @@ class School_survey_model extends CI_Model
     public function get_chospital_mk()
     {
         $rs = $this->db
-            ->where('provcode','44')
-            ->get("chospital_mk")
+            ->where('provcode',PROVCODE)
+            ->get("chospital")
             ->result();
         return $rs;
     }
@@ -117,7 +117,7 @@ class School_survey_model extends CI_Model
     {
         $rs = $this->db
             ->where("hoscode", $id)
-            ->get("chospital_mk")
+            ->get("chospital")
             ->row();
         return $rs ? $rs->name : "";
     }

@@ -1,4 +1,4 @@
-<div class="col col-lg-12" style="padding-top: 20px;margin: 2px">
+<div class="col col-lg-12" style="padding-top: 20px;margin: 0px">
     <div class="col-lg-3 ">
         <div class="panel panel-primary">
             <div class="panel-heading">
