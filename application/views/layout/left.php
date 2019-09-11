@@ -31,7 +31,8 @@
             <li>
                 <a href="#"><i class="fa fa-bus fa-fw"></i>รายงาน[Reports]<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
-                    <li><a href="<?php echo site_url('/report/com_by_series')?>">  </a></li>
+                    <li><a href="<?php echo site_url('/report_cio')?>"> ผลการดำเนินงาน CIO 2562</a></li>
+                    <li><a href="<?php echo site_url('/report_sumpoint_cio')?>"> ผลรวมคะแนน CIO 2562</a></li>
 
 
                 </ul>
